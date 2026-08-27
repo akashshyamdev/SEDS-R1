@@ -23,3 +23,5 @@ I first made the circuit connections: A photo-resistor to detect light, an ultra
 
 Using an enum, I defined the main states for the machine - Open Sea, Storm, Charybdis, Anchor Dropped and Wrecked.
 I added the LCD screen and made a helper function to easily display text.
+
+Then, I implemented the anchor logic using the button. After that, I wrote the code for calculating the distance using the pulse.
