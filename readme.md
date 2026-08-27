@@ -17,3 +17,9 @@ I tried using the normal z-score, but that wasn't removing all deviations unless
 After that, I plotted the graph using seaborn, initially with an empty line. Using FuncAnimation, I added a data point every frame.
 
 # Task 2
+
+Task 2 was to implement a state machine in TinkerCAD.
+I first made the circuit connections: A photo-resistor to detect light, an ultrasonic sensor to measure distance and a push button for the anchor.
+
+Using an enum, I defined the main states for the machine - Open Sea, Storm, Charybdis, Anchor Dropped and Wrecked.
+I added the LCD screen and made a helper function to easily display text.
