@@ -16,7 +16,7 @@ rolling_median = df['Depth (m)'].rolling(window=window_size, center=True, min_pe
 abs_deviation = (df['Depth (m)'] - rolling_median).abs()
 rolling_mad = abs_deviation.rolling(window=window_size, center=True, min_periods=1).median()
 
-# 1.4826 scales MAD to be comparable to a standard deviation, for a normal distribution
+# 1/1.4826 = 0.6745 scales MAD to be comparable to a standard deviation, for a normal distribution
 modified_z_scores = 0.6745 * (df['Depth (m)'] - rolling_median) / rolling_mad
 
 df['Is_Outlier'] = modified_z_scores.abs() > 4
@@ -49,7 +49,7 @@ def update(frame):
 
 # Time interval = 1000 ms to mimic a real sensor
 ani = animation.FuncAnimation(
-    fig, update, frames=len(df), interval=10, blit=True, repeat=False
+    fig, update, frames=len(df), interval=1000, blit=True, repeat=False
 )
 
 plt.tight_layout()
